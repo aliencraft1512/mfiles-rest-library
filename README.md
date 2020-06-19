@@ -7,9 +7,12 @@ Requires:
 * access to an MFiles RESTful API
 * the URL used to access the MFiles RESTful API
 * details for an account configured within MFiles
-* the View ID must be added to the <script> tag below: data-view-id="<VIEWID"
+* the Vault ID must be added to the <script> tage below: data-vault-id="VAULTID"
+* the View ID must be added to the <script> tag below: data-view-id="VIEWID"
 * configure the path to load the JS file to suit your requirements
-* add your own icon images - we were lazy and just used *.jpg - they really should be *.svg  
+* add your own icon images - we were lazy and just used *.jpg - they really should be *.svg
+* pass the MFiles user password to a DOM JavaScript variable: mfilesuser (if you change this update the getToken() function)
+* don't forget to add the MFiles username to the getToken() function as well
 
 You can use this template below to implement:
 <div class="row">
@@ -34,6 +37,6 @@ You can use this template below to implement:
     </div>
   </div>
 </div>
-<script src="/src/mfiles.js" type="text/javascript" data-view-id="<VIEW ID GOES HERE>"></script>
+<script src="/src/mfiles.js" type="text/javascript" data-vault-id="<VAULT ID GOES HERE>" data-view-id="<VIEW ID GOES HERE>"></script>
 
 ## You can of course rewrite the JS code so that it renders all of the requiured HTML DOM elements
