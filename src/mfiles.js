@@ -5,6 +5,21 @@
  */
 window.mfiles = {};
 
+/**
+ * These store the parameters gleaned from the <script> tag
+ * We need the VAULT ID when connecting and fetching the API token
+ * We use the VIEW ID to set the directory that will be loaded and traversed
+ *
+ * @type {null}
+ */
+window.mfiles.vaultID = null;
+window.mfiles.viewID  = null;
+
+/**
+ * Store the Auth token here
+ *
+ * @type {null}
+ */
 window.mfiles.authToken = null;
 
 /**
@@ -980,10 +995,11 @@ jQuery(function($) {
     };
 
     /**
+     * Handle the returned token, then make the initial call to fetch and render the root view
      *
      * @param token
      */
-    let processToken = function (token) {
+    const processToken = function (token) {
         // Set the header.
         $.ajaxSetup({ headers: { "X-Authentication" : token.Value } });
         window.mfiles.authToken = token.Value;
@@ -991,6 +1007,7 @@ jQuery(function($) {
     };
 
     /**
+     * This is the apps initialising function - only runs on first load of the page
      *
      * @param username
      * @param password
@@ -1010,12 +1027,10 @@ jQuery(function($) {
         });
     };
 
-    /** check the applications main template index for declared const value */
-    /** ICT Testing Vault */
-    //getToken('mfilesuser.svc', mfilesuser, '1D9A92CF-DF00-4B9B-AB7E-DA5C11CEA75A');
-    /** Golden Cockerel Vault */
-    //getToken('mfilesuser.svc', mfilesuser, '086B601C-9DF8-4C10-9794-1FFC208606F5');
-    /** Golden Cockerel HR Vault */
-    getToken('mfilesuser.svc', mfilesuser, '7FDE2E30-E629-46AD-9236-71BA7AD9C095');
+    /**
+     * ToDo: change the MFiles username here to match your RESTful API service user
+     * check the applications main template for declared const value (mfilesuser) 
+     */
+    getToken('mfilesusername', mfilesuser, '7FDE2E30-E629-46AD-9236-71BA7AD9C095');
 
 });
