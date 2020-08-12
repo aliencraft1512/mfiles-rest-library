@@ -1,6 +1,12 @@
 # MFiles RESTful API Javascript Library
 
-A JavaScript library written with jQuery used to fetch (any) View from a configured MFiles Vault.
+An MFiles RESTful API consumption library written with jQuery used to fetch (any) View from a configured MFiles Vault.
+
+## Provides:
+* List all files within the given view 
+* Preview any documents meta data
+* Traverse directories
+* Download a document
 
 Requires:
 * jQuery 2.4.*+
@@ -11,8 +17,8 @@ Requires:
 * the View ID must be added to the <script> tag below: data-view-id="VIEWID"
 * configure the path to load the JS file to suit your requirements
 * add your own icon images - we were lazy and just used *.jpg - they really should be *.svg
-* pass the MFiles user password to a DOM JavaScript variable: mfilesuser (if you change this update the getToken() function)
-* don't forget to add the MFiles username to the getToken() function as well
+* pass the MFiles user & password to DOM JavaScript variables: mfilesuser | mfilespasswd 
+* OR add the MFiles user and password at the base of the script
 
 You can use this template below to implement:
 ```
@@ -41,4 +47,5 @@ You can use this template below to implement:
 <script src="/src/mfiles.js" type="text/javascript" data-vault-id="<VAULT ID GOES HERE>" data-view-id="<VIEW ID GOES HERE>"></script>
 ```
 
-## You can of course rewrite the JS code so that it renders all of the requiured HTML DOM elements
+## You could of course rewrite the JS code so that it renders all of the required HTML DOM elements for you
+With a bit of work the jQuery dependancy could also be removed (you'd still need another library for the AJAX functionality - unless you roll your own)
