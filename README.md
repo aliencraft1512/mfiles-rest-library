@@ -15,6 +15,7 @@ Requires:
 * don't forget to add the MFiles username to the getToken() function as well
 
 You can use this template below to implement:
+```
 <div class="row">
   <div id="mfiles-header" class="col mfiles-header">
     <span id="mfiles-crumbs" class="gc-crumbs float-left"></span>
@@ -38,5 +39,6 @@ You can use this template below to implement:
   </div>
 </div>
 <script src="/src/mfiles.js" type="text/javascript" data-vault-id="<VAULT ID GOES HERE>" data-view-id="<VIEW ID GOES HERE>"></script>
+```
 
 ## You can of course rewrite the JS code so that it renders all of the requiured HTML DOM elements
