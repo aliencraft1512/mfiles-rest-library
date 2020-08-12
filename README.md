@@ -8,19 +8,20 @@ An MFiles RESTful API consumption library written with jQuery used to fetch (any
 * Traverse directories
 * Download a document
 
-Requires:
+## Requires:
 * jQuery 2.4.*+
-* access to an MFiles RESTful API
-* the URL used to access the MFiles RESTful API
-* details for an account configured within MFiles
-* the Vault ID must be added to the <script> tage below: data-vault-id="VAULTID"
-* the View ID must be added to the <script> tag below: data-view-id="VIEWID"
-* configure the path to load the JS file to suit your requirements
-* add your own icon images - we were lazy and just used *.jpg - they really should be *.svg
-* pass the MFiles user & password to DOM JavaScript variables: mfilesuser | mfilespasswd 
+* Access to an MFiles RESTful API
+* Tthe URL used to access the MFiles RESTful API
+* Details for an account configured within MFiles
+* The Vault ID must be added to the <script> tage below: data-vault-id="VAULTID"
+* The View ID must be added to the <script> tag below: data-view-id="VIEWID"
+* Configure the path to load the JS file to suit your requirements
+* Add your own icon images - we were lazy and just used *.jpg - they really should be *.svg
+* The image icons are loaded relative to the site root directory  
+* Pass the MFiles user & password to DOM JavaScript variables: mfilesuser | mfilespasswd 
 * OR add the MFiles user and password at the base of the script
 
-You can use this template below to implement:
+### You can use this template below to implement:
 ```
 <div class="row">
   <div id="mfiles-header" class="col mfiles-header">
