@@ -986,14 +986,7 @@ jQuery(document).ajaxError(function(event, request, setting) {
             });
         },
 
-        /** check the applications main template index for declared const value */
-        /** ICT Testing Vault */
-        /* getToken('mfilesuser.svc', mfilesuser, '1D9A92CF-DF00-4B9B-AB7E-DA5C11CEA75A'); */
-        /** Golden Cockerel Vault */
-        /* getToken('mfilesuser.svc', mfilesuser, '086B601C-9DF8-4C10-9794-1FFC208606F5'); */
-        /** Golden Cockerel HR Vault */
-        /* getToken('mfilesuser.svc', mfilesuser, '7FDE2E30-E629-46AD-9236-71BA7AD9C095'); */
-
+        /** call this to initialise the connection - correct parameters are required */
         /** we'll use the VAULT ID passed in from the calling script **/
         runConnect: function() {
             if (mfiles.vaultID && mfiles.passWd) {
